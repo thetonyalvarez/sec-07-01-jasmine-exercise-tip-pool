@@ -36,7 +36,7 @@ describe("Payments test (with setup and tear-down)", function() {
 		let paymentList = document.querySelectorAll('#paymentTable tbody tr');
 
 		expect(paymentList.length).toEqual(2);
-	})
+	});
 
 	afterEach(() => {
 

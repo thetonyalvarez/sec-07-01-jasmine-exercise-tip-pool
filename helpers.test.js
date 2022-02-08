@@ -51,6 +51,20 @@ describe("Helpers test (with setup and tear-down)", () => {
 		expect(newTr.innerText).toEqual('test');
 		
 	});
+
+	it('should create a close X element', () => {
+		let tr = document.createElement('tr');
+		appendDeleteBtn(tr);
+		expect(tr.innerText).toEqual('X');
+		expect(tr.children[0].className).toEqual('deleteBtn');
+	});
+
+	// ? How do I create a test for Listener events?
+	// it('should remove row if X is clicked', () => {
+	// 	let tr = document.createElement('tr');
+	// 	appendDeleteBtn(tr);
+	// })
+
 	afterEach(function() {
 		billAmtInput.value = '';
 		tipAmtInput.value = '';
